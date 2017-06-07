@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="gui.SearchScreenController">
+  <bottom>
+    <Button fx:id="backBtn" mnemonicParsing="false" onAction="#back" text="Back" BorderPane.alignment="CENTER">
+      <BorderPane.margin>
+        <Insets bottom="10.0" />
+      </BorderPane.margin>
+    </Button>
+  </bottom>
+  <center>
+    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+      <children>
+        <Text scaleX="1.000005514381507" scaleY="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search">
+          <font>
+            <Font size="40.0" />
+          </font>
+        </Text>
+        <Text fx:id="messageText" scaleX="1.0" scaleY="0.9999937347040251" strokeType="OUTSIDE" strokeWidth="0.0" text="Select search properties and enter search term ">
+          <font>
+            <Font size="20.0" fx:id="x1" />
+          </font>
+        </Text>
+        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+          <children>
+            <RadioButton fx:id="searchIDRadio" mnemonicParsing="false" onAction="#searchByID" text="Search by ID" />
+            <RadioButton id="searchTimeRadio" fx:id="searchCookieRadio" mnemonicParsing="false" onAction="#searchByCookie" text="Search by cookie" />
+            <RadioButton id="searchCookieRadio" fx:id="searchTimeRadio" mnemonicParsing="false" onAction="#searchByTime" text="Search by time produced" />
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" spacing="10.0">
+          <children>
+            <TextField id="enterIDField" fx:id="enterField1" maxWidth="100.0" prefWidth="100.0" promptText="Enter input" />
+            <TextField fx:id="enterField2" maxWidth="100.0" prefWidth="100.0" promptText="Time End" />
+          </children>
+        </HBox>
+        <Button fx:id="searchBtn" mnemonicParsing="false" onAction="#search" text="Search!">
+          <VBox.margin>
+            <Insets fx:id="x2" />
+          </VBox.margin>
+        </Button>
+        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Results" />
+        <HBox alignment="CENTER" prefHeight="103.0" prefWidth="600.0" spacing="10.0" VBox.margin="$x2">
+          <children>
+            <Label text="Found pallet IDs:" />
+            <ListView fx:id="resultList" prefHeight="103.0" prefWidth="152.0" />
+            <GridPane prefHeight="117.0001220703125" prefWidth="226.0">
+              <children>
+                <Label text="Containing cookie:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label text="Delivered:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <Label text="Production Date:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <Label text="Location:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <Label text="Blocked:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <Text id="palletIDText" fx:id="cookieNameText" strokeType="OUTSIDE" strokeWidth="0.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Text fx:id="deliveredText" scaleX="0.999994485618493" scaleY="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Text fx:id="productionDateText" scaleX="1.0" scaleY="0.9999923519334313" strokeType="OUTSIDE" strokeWidth="0.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Text fx:id="locationText" scaleX="1.00000099697538" scaleY="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Text fx:id="blockedText" scaleX="1.0" scaleY="0.9999999999607461" strokeType="OUTSIDE" strokeWidth="0.0" text="" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+              </children>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="19.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="33.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+          </children>
+          <padding>
+            <Insets fx:id="x2" />
+          </padding>
+        </HBox>
+      </children>
+    </VBox>
+  </center>
+</BorderPane>

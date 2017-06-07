@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="gui.ProduceScreenController">
+  <bottom>
+    <Button fx:id="backBtn" mnemonicParsing="false" onAction="#back" text="Back" BorderPane.alignment="CENTER">
+      <BorderPane.margin>
+        <Insets bottom="10.0" />
+      </BorderPane.margin>
+    </Button>
+  </bottom>
+  <center>
+    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="0.0">
+      <children>
+        <Text scaleX="1.000005514381507" scaleY="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produce">
+          <font>
+            <Font size="40.0" />
+          </font>
+        </Text>
+        <Text fx:id="messageText" scaleX="1.0" scaleY="0.9999937347040251" strokeType="OUTSIDE" strokeWidth="0.0" text="Select the cookie you want to produce">
+          <font>
+            <Font size="20.0" />
+          </font>
+        </Text>
+        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" spacing="12.0">
+          <children>
+            <ListView fx:id="cookiesList" prefHeight="40.0" prefWidth="120.0">
+              <HBox.margin>
+                <Insets bottom="10.0" top="10.0" />
+              </HBox.margin>
+            </ListView>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+              <children>
+                <Button fx:id="produceBtn" mnemonicParsing="false" onAction="#produce" text="Produce!" />
+              </children>
+            </VBox>
+          </children>
+          <padding>
+            <Insets top="10.0" />
+          </padding>
+        </HBox>
+      </children>
+    </VBox>
+  </center>
+</BorderPane>

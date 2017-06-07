@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="gui.BlockScreenController">
+  <bottom>
+    <Button fx:id="backBtn" mnemonicParsing="false" onAction="#back" text="Back" BorderPane.alignment="CENTER">
+      <BorderPane.margin>
+        <Insets bottom="10.0" />
+      </BorderPane.margin>
+    </Button>
+  </bottom>
+  <center>
+    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="0.0">
+      <children>
+        <Text scaleX="1.000005514381507" scaleY="1.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Block">
+          <font>
+            <Font size="40.0" />
+          </font>
+        </Text>
+        <Text id="messageID" fx:id="messageText" scaleX="1.0" scaleY="0.9999937347040251" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter time (YYYY-MM-DD) and cookie name">
+          <font>
+            <Font size="20.0" />
+          </font>
+        </Text>
+        <HBox alignment="CENTER" prefHeight="-1.0" prefWidth="-1.0" spacing="12.0">
+          <children>
+            <TextField id="timeID" fx:id="timeField" maxWidth="100.0" prefWidth="100.0" promptText="Time" />
+            <TextField id="enterIDField" fx:id="nameField" maxWidth="100.0" prefWidth="200.0" promptText="Name" />
+          </children>
+          <padding>
+            <Insets top="10.0" />
+          </padding>
+        </HBox>
+        <Button fx:id="blockBtn" mnemonicParsing="false" onAction="#block" text="Block!">
+          <VBox.margin>
+            <Insets top="10.0" />
+          </VBox.margin>
+        </Button>
+      </children>
+    </VBox>
+  </center>
+</BorderPane>
